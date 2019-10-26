@@ -19,7 +19,7 @@ Build:
   tags:
     - docker
   script:
-    - docker build
+    - docker build .
 
 Final:
   stage: deploy
