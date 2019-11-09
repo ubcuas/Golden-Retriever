@@ -1,0 +1,22 @@
+version: "3"
+
+
+services:
+  nginx:
+    container_name: golden-nginx
+    hostname: golden-nginx
+    build:
+      context: ./
+    tty: true
+    volumes:
+      - ./images:/uas/golden/images
+    ports:
+      - "8089:80"
+    networks:
+      - gcomnet
+
+
+networks:
+  gcomnet:
+    external:
+      name: gcom-x_uasnet
