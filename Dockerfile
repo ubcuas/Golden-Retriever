@@ -1,8 +1,10 @@
-FROM python:3.7.4-buster
+FROM ubcuas/pyuuas:latest
 
-RUN mkdir -p /uas/gcomx/golden
-WORKDIR /uas/gcomx/golden
+RUN mkdir -p /uas/golden
+WORKDIR /uas/golden
 
-RUN pip3 install requests beautifulsoup4
+COPY requirements.txt ./
+RUN pip3 install -r requirements.txt
 
-COPY app.py .
+COPY app.py ./
+CMD ["python3", "app.py"]

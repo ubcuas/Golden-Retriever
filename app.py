@@ -6,8 +6,8 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
-PATH_TO_WRITE = '/uas/gcomx/golden/images'
-NGINX_URL = 'http://golden-nginx/' 
+PATH_TO_WRITE = '/uas/golden/images'
+NGINX_URL = 'http://golden-nginx/'
 EXT1 = 'JPEG'
 EXT2 = 'jpg'
 wait = 1
