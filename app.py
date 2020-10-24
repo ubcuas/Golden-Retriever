@@ -18,8 +18,6 @@ io_args = parser.parse_args()
 
 PATH_TO_WRITE = io_args.path
 NGINX_URL = io_args.url
-print(PATH_TO_WRITE)
-print(NGINX_URL)
 
 while True:
 
