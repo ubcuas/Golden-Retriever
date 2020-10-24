@@ -12,12 +12,14 @@ EXT2 = 'jpg'
 wait = 1
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-path', default='/uas/golden/images')
-parser.add_argument('-url', default='http://golden-nginx/')
+parser.add_argument('--path', default='/uas/golden/images')
+parser.add_argument('--url', default='http://golden-nginx/')
 io_args = parser.parse_args()
 
 PATH_TO_WRITE = io_args.path
 NGINX_URL = io_args.url
+print(PATH_TO_WRITE)
+print(NGINX_URL)
 
 while True:
 
