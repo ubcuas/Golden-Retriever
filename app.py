@@ -7,17 +7,20 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
-EXT1 = 'JPEG'
-EXT2 = 'jpg'
-wait = 1
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--path', default='/uas/golden/images')
 parser.add_argument('--url', default='http://golden-nginx/')
+parser.add_argument('--wait', default=1)
+parser.add_argument('--ext1', default='JPEG')
+parser.add_argument('--ext2', default='jpg')
 io_args = parser.parse_args()
 
 PATH_TO_WRITE = io_args.path
 NGINX_URL = io_args.url
+wait = io_args.wait
+EXT1 = io_args.ext1
+EXT2 = io_args.ext2
 
 while True:
 
