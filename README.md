@@ -5,7 +5,19 @@ Fetches images from the drone!
 - Docker
 
 ## Installation and Run
-Cd to the repo root where the Dockerfile is and build the image locally:
+### Without Docker
+cd to the repo root
+'''
+pip3 install -r requirements.txt
+python3 app.py
+'''
+You can customize the run with passing parameters as such:
+'''
+python3 app.py --path /home/odroid/ImageCopy --list_url http://localhost:8080/listimages/ --get_url http://localhost:8080/getimage/
+'''
+
+# With Docker
+cd to the repo root where the Dockerfile is and build the image locally:
 
 ```
 docker image build -t golden .
